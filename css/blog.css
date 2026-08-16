@@ -1,0 +1,209 @@
+.blog-section {
+  padding: 8rem 0;
+}
+
+.blog-header {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.blog-label {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.875rem;
+  color: var(--accent-gold);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.blog-heading {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.blog-card {
+  perspective: 2000px;
+  height: 360px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.blog-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 600ms cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+@media (hover: hover) {
+  .blog-card:hover .blog-card-inner {
+    transform: rotateY(180deg);
+  }
+}
+
+.blog-card.flipped .blog-card-inner {
+  transform: rotateY(180deg);
+}
+
+.blog-card-front, .blog-card-back {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: linear-gradient(145deg, var(--bg-surface), var(--bg));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-card-front {
+  justify-content: flex-end;
+}
+
+.blog-card-back {
+  transform: rotateY(180deg);
+  justify-content: space-between;
+}
+
+.blog-orbs-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.blog-orb {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--accent-orange);
+  box-shadow: 0 0 10px 2px var(--accent-orange);
+  opacity: 0;
+  animation: floatOrb 4s infinite;
+}
+
+@keyframes floatOrb {
+  0% { transform: translateY(100px) scale(0); opacity: 0; }
+  50% { opacity: 0.5; }
+  100% { transform: translateY(-50px) scale(1.5); opacity: 0; }
+}
+
+.blog-card-front-content {
+  position: relative;
+  z-index: 1;
+}
+
+.blog-tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  background: rgba(249, 115, 22, 0.1);
+  color: var(--accent-orange);
+  font-size: 0.75rem;
+  border-radius: 9999px;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.blog-card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.blog-card-date {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+.blog-back-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.blog-back-excerpt {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.blog-back-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.blog-back-tag {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.5rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 4px;
+  color: var(--text-muted);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.blog-card:hover .blog-back-tag,
+.blog-card.flipped .blog-back-tag {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.blog-card:hover .blog-back-tag:nth-child(1),
+.blog-card.flipped .blog-back-tag:nth-child(1) { transition-delay: 0.2s; }
+.blog-card:hover .blog-back-tag:nth-child(2),
+.blog-card.flipped .blog-back-tag:nth-child(2) { transition-delay: 0.3s; }
+.blog-card:hover .blog-back-tag:nth-child(3),
+.blog-card.flipped .blog-back-tag:nth-child(3) { transition-delay: 0.4s; }
+
+.blog-read-more {
+  background: none;
+  border: none;
+  color: var(--accent-gold);
+  font-size: 0.875rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0;
+  transition: opacity 0.3s;
+}
+
+.blog-read-more svg {
+  transition: transform 0.3s ease;
+}
+
+.blog-read-more:hover svg {
+  transform: translateX(4px);
+}
