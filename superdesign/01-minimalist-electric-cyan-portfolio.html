@@ -1,0 +1,442 @@
+<!DOCTYPE html><html lang="en" class="scroll-smooth"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rishit Singh | Electrical & Electronics Engineer</title>
+  <meta name="view-transition" content="same-origin">
+  <link rel="prefetch" href="https://draft-e8309528-0ec1-4066-9a59-7b8bf8f98a0e.preview.superdesign.dev" as="document">
+  <link rel="prefetch" href="https://draft-1f90de1b-d413-4701-8e63-2176712c04ff.preview.superdesign.dev" as="document">
+  <link rel="prefetch" href="https://draft-d0826f3f-da85-4698-b189-56d7a9d0e49a.preview.superdesign.dev" as="document">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+
+    :root {
+      --accent: #00D9FF; /* Electric Cyan */
+      --bg-dark: #000000;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-dark);
+      color: #ffffff;
+    }
+
+    .font-display {
+      font-family: 'Space Grotesk', sans-serif;
+    }
+
+    .glass-card {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .project-card:hover .project-overlay {
+      opacity: 1;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: #00D9FF;
+      box-shadow: 0 0 20px rgba(0, 217, 255, 0.15);
+    }
+
+    canvas {
+      display: block;
+      width: 100% !important;
+      height: 100% !important;
+    }
+
+    html { background-color: #000000; }
+    @view-transition { navigation: auto; }
+
+    ::view-transition-old(main-nav),
+    ::view-transition-new(main-nav) {
+      animation: none;
+      mix-blend-mode: normal;
+    }
+
+    ::view-transition-old(main-content) {
+      animation: 0.25s ease-out both fade-out;
+    }
+    ::view-transition-new(main-content) {
+      animation: 0.25s ease-in 0.1s both fade-in;
+    }
+
+    @keyframes fade-out { from { opacity: 1; } to { opacity: 0; } }
+    @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+
+    .main-nav-container { view-transition-name: main-nav; }
+    main { view-transition-name: main-content; }
+  </style>
+</head>
+<body>
+  <div class="min-h-screen bg-[#000000] overflow-x-hidden flex flex-col" data-sd-id="1">
+    <!-- Navigation -->
+    <div class="main-nav-container">
+      <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-[#000000]/80 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+          <a href="#hero" class="font-display font-bold text-2xl tracking-tighter text-[#00D9FF]">RISHIT SINGH</a>
+          <div class="hidden md:flex items-center space-x-10 text-sm font-medium tracking-wide uppercase">
+            <a href="https://draft-1f90de1b-d413-4701-8e63-2176712c04ff.preview.superdesign.dev" class="hover:text-[#00D9FF] transition-colors">Work</a>
+            <a href="#about" class="hover:text-[#00D9FF] transition-colors">About</a>
+            <a href="#services" class="hover:text-[#00D9FF] transition-colors">Services</a>
+            <a href="#contact" class="px-6 py-2 border border-[#00D9FF] text-[#00D9FF] hover:bg-[#00D9FF] hover:text-black transition-all rounded-full">Contact</a>
+          </div>
+          <button class="p-2 rounded-full hover:bg-white/5 transition-colors" aria-label="Toggle Theme">
+            <iconify-icon icon="lucide:sun" class="text-xl"></iconify-icon>
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <main class="flex-grow">
+    <!-- Hero Section -->
+    <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden" data-sd-id="11">
+      <!-- Force Field p5.js Integration -->
+      <div id="p5-hero-container" class="absolute inset-0 z-0 pointer-events-auto" data-sd-id="12"></div>
+      
+      <div class="relative z-10 text-center px-6 max-w-5xl pointer-events-none" data-sd-id="13">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-[#00D9FF]/10 border border-[#00D9FF]/20 text-[#00D9FF] text-xs font-bold uppercase tracking-widest mb-8" data-sd-id="14">
+          <span class="relative flex h-2 w-2" data-sd-id="15">
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-[#00D9FF]" data-sd-id="17"></span>
+          </span>
+          <span data-sd-id="18">Available for New Projects</span>
+        </div>
+        <h1 class="text-7xl md:text-[6rem] lg:text-[7.5rem] xl:text-[9rem] font-display font-black tracking-tighter leading-[0.9] uppercase mb-8" data-sd-id="19">
+          <span class="block" data-sd-id="20">Electrical and</span>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-[#00D9FF] to-[#008fb3]" data-sd-id="21">Electronics Engineer</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-white/60 font-light max-w-2xl mx-auto mb-12" data-sd-id="22">
+          Designing intelligent electrical systems and innovative electronics solutions with precision and sustainability.
+        </p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-6 pointer-events-auto mb-4" data-sd-id="23">
+          <a href="#work" id="cta-hero-work" class="group relative px-8 py-4 bg-[#00D9FF] text-black rounded-full font-bold overflow-hidden transition-all" data-sd-id="24">
+            <span class="relative z-10" data-sd-id="25">View My Work</span>
+            <div class="absolute inset-0 bg-[#00b8d9] scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300" data-sd-id="26"></div>
+          </a>
+          <a href="#contact" id="cta-hero-contact" class="px-8 py-4 glass-card hover:bg-white/5 transition-colors rounded-full font-bold" data-sd-id="27">
+            Let's Talk
+          </a>
+          <a href="https://draft-d0826f3f-da85-4698-b189-56d7a9d0e49a.preview.superdesign.dev" id="cta-hero-resume" class="px-8 py-4 border border-white/10 hover:border-[#00D9FF] hover:text-[#00D9FF] transition-colors rounded-full font-bold flex items-center gap-2">
+            <iconify-icon icon="lucide:file-text"></iconify-icon> Resume
+          </a>
+        </div>
+      </div>
+      
+      <div class="absolute bottom-10 left-1/2 -translate-x-1/2 opacity-40" data-sd-id="28">
+        <iconify-icon icon="lucide:mouse-pointer-2" class="text-2xl"></iconify-icon>
+      </div>
+    </section>
+
+    <!-- Work Gallery Section -->
+    <section id="work" class="py-32 lg:py-40 px-6" data-sd-id="29">
+      <div class="max-w-7xl mx-auto" data-sd-id="30">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-20 gap-8" data-sd-id="31">
+          <div data-sd-id="32">
+            <span class="text-[#00D9FF] font-mono tracking-tighter uppercase text-sm mb-2 block" data-sd-id="33">01 / Selected Work</span>
+            <h2 class="text-5xl font-display font-bold" data-sd-id="34">Featured Projects</h2>
+          </div>
+          <p class="text-white/50 max-w-md" data-sd-id="35">
+            A curated selection of experiments and client projects focused on high-performance interaction and clean architectural design.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12" data-sd-id="36">
+          <!-- Project Card 1 -->
+          <div class="project-card relative group aspect-video lg:aspect-square overflow-hidden rounded-3xl glass-card" data-sd-id="37">
+            <img src="https://images.unsplash.com/photo-1551288049-bbbda536ad0a?auto=format&amp;fit=crop&amp;q=80&amp;w=1200" alt="Dashboard" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" data-sd-id="38">
+            <div class="project-overlay absolute inset-0 bg-black/90 flex flex-col justify-end p-10 opacity-0 transition-opacity duration-300" data-sd-id="39">
+              <h3 class="text-3xl font-display font-bold mb-2 text-[#00D9FF]" data-sd-id="40">Interactive Dashboard UI</h3>
+              <p class="text-white/70 mb-6" data-sd-id="41">A real-time data visualization platform for enterprise logistics and fleet management.</p>
+              <div class="flex gap-4" data-sd-id="42">
+                <a href="https://draft-e8309528-0ec1-4066-9a59-7b8bf8f98a0e.preview.superdesign.dev" id="case-study-btn-1" class="px-6 py-3 bg-white text-black font-bold rounded-full text-sm inline-block">View Case Study</a>
+                <span class="p-3 glass-card rounded-full flex items-center justify-center" data-sd-id="44"><iconify-icon icon="lucide:external-link"></iconify-icon></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 2 -->
+          <div class="project-card relative group aspect-video lg:aspect-[4/5] overflow-hidden rounded-3xl glass-card md:mt-12" data-sd-id="45">
+            <img src="https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&amp;fit=crop&amp;q=80&amp;w=1200" alt="Ecommerce" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" data-sd-id="46">
+            <div class="project-overlay absolute inset-0 bg-black/90 flex flex-col justify-end p-10 opacity-0 transition-opacity duration-300" data-sd-id="47">
+              <h3 class="text-3xl font-display font-bold mb-2 text-[#00D9FF]" data-sd-id="48">e-commerce Experience</h3>
+              <p class="text-white/70 mb-6" data-sd-id="49">A minimalist, lightning-fast shopping experience built with Next.js and Shopify Hydrogen.</p>
+              <div class="flex gap-4" data-sd-id="50">
+                <button class="px-6 py-3 bg-white text-black font-bold rounded-full text-sm" data-sd-id="51">View Case Study</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 3 -->
+          <div class="project-card relative group aspect-video lg:aspect-[4/5] overflow-hidden rounded-3xl glass-card md:-mt-12" data-sd-id="52">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&amp;fit=crop&amp;q=80&amp;w=1200" alt="Collaboration" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" data-sd-id="53">
+            <div class="project-overlay absolute inset-0 bg-black/90 flex flex-col justify-end p-10 opacity-0 transition-opacity duration-300" data-sd-id="54">
+              <h3 class="text-3xl font-display font-bold mb-2 text-[#00D9FF]" data-sd-id="55">Collaboration Tool</h3>
+              <p class="text-white/70 mb-6" data-sd-id="56">Multiplayer canvas interaction for remote creative teams, leveraging WebSockets.</p>
+              <div class="flex gap-4" data-sd-id="57">
+                <button class="px-6 py-3 bg-white text-black font-bold rounded-full text-sm" data-sd-id="58">View Case Study</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project Card 4 -->
+          <div class="project-card relative group aspect-video lg:aspect-square overflow-hidden rounded-3xl glass-card" data-sd-id="59">
+            <img src="https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&amp;fit=crop&amp;q=80&amp;w=1200" alt="WebGL" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-80" data-sd-id="60">
+            <div class="project-overlay absolute inset-0 bg-black/90 flex flex-col justify-end p-10 opacity-0 transition-opacity duration-300" data-sd-id="61">
+              <h3 class="text-3xl font-display font-bold mb-2 text-[#00D9FF]" data-sd-id="62">WebGL Experience</h3>
+              <p class="text-white/70 mb-6" data-sd-id="63">An immersive 3D marketing site showcasing spatial audio and interactive particle fields.</p>
+              <div class="flex gap-4" data-sd-id="64">
+                <button class="px-6 py-3 bg-white text-black font-bold rounded-full text-sm" data-sd-id="65">View Case Study</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-32 lg:py-40 px-6 bg-black border-t border-white/5" data-sd-id="66">
+      <div class="max-w-7xl mx-auto" data-sd-id="67">
+        <div class="relative p-12 md:p-24 rounded-[3rem] bg-zinc-950/50 border border-white/5 overflow-hidden" data-sd-id="68">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center relative z-10" data-sd-id="68-inner">
+            <div class="order-2 lg:order-1" data-sd-id="69">
+              <span class="text-[#00D9FF] font-mono tracking-[0.2em] uppercase text-sm mb-4 block" data-sd-id="70">02 / Identity</span>
+              <h2 class="text-6xl md:text-7xl font-display font-bold mb-8 leading-none tracking-tight text-white" data-sd-id="71">Code as Creative Expression</h2>
+              <div class="space-y-6 text-zinc-400 text-xl leading-relaxed" data-sd-id="72">
+                <p data-sd-id="73">I'm a multidisciplinary developer who believes that technology should be as beautiful as it is functional. With a background in both fine arts and computer science, I build products that speak to humans, not just machines.</p>
+                <p data-sd-id="74">My philosophy centers on <strong class="text-white">"Fluid Engineering"</strong>—the idea that interactions should feel natural, responsive, and delightful. I specialize in React, Three.js, and complex state management.</p>
+                <ul class="grid grid-cols-1 md:grid-cols-2 gap-6 text-base mt-12" data-sd-id="75">
+                  <li class="flex items-center space-x-4 text-white p-4 rounded-2xl glass-card" data-sd-id="76"><iconify-icon icon="lucide:zap" class="text-[#00D9FF] text-2xl"></iconify-icon><span data-sd-id="77">Performance Optimization</span></li>
+                  <li class="flex items-center space-x-4 text-white p-4 rounded-2xl glass-card" data-sd-id="78"><iconify-icon icon="lucide:cpu" class="text-[#00D9FF] text-2xl"></iconify-icon><span data-sd-id="79">Creative Storytelling</span></li>
+                  <li class="flex items-center space-x-4 text-white p-4 rounded-2xl glass-card" data-sd-id="80"><iconify-icon icon="lucide:layers" class="text-[#00D9FF] text-2xl"></iconify-icon><span data-sd-id="81">Accessible Design Systems</span></li>
+                  <li class="flex items-center space-x-4 text-white p-4 rounded-2xl glass-card" data-sd-id="82"><iconify-icon icon="lucide:flask-conical" class="text-[#00D9FF] text-2xl"></iconify-icon><span data-sd-id="83">Rapid Prototyping</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="order-1 lg:order-2 relative" data-sd-id="84">
+               <div class="w-full aspect-[4/5] rounded-[2.5rem] overflow-hidden border border-white/10 relative z-10" data-sd-id="85">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&amp;fit=crop&amp;q=80&amp;w=800" alt="Profile" class="w-full h-full object-cover">
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-32 lg:py-40 px-6" data-sd-id="89">
+      <div class="max-w-7xl mx-auto" data-sd-id="90">
+        <div class="text-center mb-20" data-sd-id="91">
+          <span class="text-[#00D9FF] font-mono tracking-tighter uppercase text-sm mb-4 block" data-sd-id="92">03 / Expertise</span>
+          <h2 class="text-5xl font-display font-bold" data-sd-id="93">Core Capabilities</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" data-sd-id="94">
+          <div class="glass-card p-8 rounded-3xl hover:border-[#00D9FF]/30 transition-all group" data-sd-id="95">
+            <div class="w-14 h-14 bg-[#00D9FF]/10 rounded-2xl flex items-center justify-center text-[#00D9FF] text-3xl mb-8 transition-transform" data-sd-id="96">
+              <iconify-icon icon="lucide:layout-template"></iconify-icon>
+            </div>
+            <h3 class="text-xl font-bold mb-4" data-sd-id="97">UI/UX Design</h3>
+            <p class="text-white/60 text-sm leading-relaxed" data-sd-id="98">Crafting intuitive, user-centric interfaces with a focus on usability and modern aesthetics.</p>
+          </div>
+
+          <div class="glass-card p-8 rounded-3xl hover:border-[#00D9FF]/30 transition-all group" data-sd-id="99">
+            <div class="w-14 h-14 bg-[#00D9FF]/10 rounded-2xl flex items-center justify-center text-[#00D9FF] text-3xl mb-8 transition-transform" data-sd-id="100">
+              <iconify-icon icon="lucide:code-2"></iconify-icon>
+            </div>
+            <h3 class="text-xl font-bold mb-4" data-sd-id="101">Full-Stack Dev</h3>
+            <p class="text-white/60 text-sm leading-relaxed" data-sd-id="102">Building robust, scalable applications using modern stacks like React, Node, and TypeScript.</p>
+          </div>
+
+          <div class="glass-card p-8 rounded-3xl hover:border-[#00D9FF]/30 transition-all group" data-sd-id="103">
+            <div class="w-14 h-14 bg-[#00D9FF]/10 rounded-2xl flex items-center justify-center text-[#00D9FF] text-3xl mb-8 transition-transform" data-sd-id="104">
+              <iconify-icon icon="lucide:sparkles"></iconify-icon>
+            </div>
+            <h3 class="text-xl font-bold mb-4" data-sd-id="105">Interactive Code</h3>
+            <p class="text-white/60 text-sm leading-relaxed" data-sd-id="106">Creating high-performance animations and 3D experiences using Three.js, p5.js and GSAP.</p>
+          </div>
+
+          <div class="glass-card p-8 rounded-3xl hover:border-[#00D9FF]/30 transition-all group" data-sd-id="107">
+            <div class="w-14 h-14 bg-[#00D9FF]/10 rounded-2xl flex items-center justify-center text-[#00D9FF] text-3xl mb-8 transition-transform" data-sd-id="108">
+              <iconify-icon icon="lucide:compass"></iconify-icon>
+            </div>
+            <h3 class="text-xl font-bold mb-4" data-sd-id="109">Creative Direction</h3>
+            <p class="text-white/60 text-sm leading-relaxed" data-sd-id="110">Bridging visual concepts with technical possibilities to deliver cohesive digital identities.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 lg:py-40 px-6 bg-black border-t border-white/5" data-sd-id="111">
+      <div class="max-w-7xl mx-auto" data-sd-id="112">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-20" data-sd-id="113">
+          <div data-sd-id="114">
+            <span class="text-[#00D9FF] font-mono tracking-tighter uppercase text-sm mb-4 block" data-sd-id="115">04 / Connectivity</span>
+            <h2 class="text-6xl font-display font-bold mb-8" data-sd-id="116">Let's create something <span class="text-[#00D9FF]" data-sd-id="117">extraordinary.</span></h2>
+            <p class="text-white/60 text-lg mb-12 max-w-md" data-sd-id="118">
+              Whether you have a specific project in mind or just want to chat about the future of creative tech, my door is always open.
+            </p>
+            
+            <div class="space-y-6" data-sd-id="119">
+              <a href="mailto:hello@rishitsingh.dev" id="social-email" class="flex items-center space-x-4 group" data-sd-id="120">
+                <span class="w-12 h-12 bg-white/5 border border-white/10 rounded-full flex items-center justify-center group-hover:bg-[#00D9FF] group-hover:text-black group-hover:border-[#00D9FF] transition-colors" data-sd-id="121">
+                  <iconify-icon icon="lucide:mail" class="text-xl"></iconify-icon>
+                </span>
+                <span class="text-xl font-medium" data-sd-id="122">hello@rishitsingh.dev</span>
+              </a>
+              <a href="#" id="social-linkedin" class="flex items-center space-x-4 group" data-sd-id="123">
+                <span class="w-12 h-12 bg-white/5 border border-white/10 rounded-full flex items-center justify-center group-hover:bg-[#00D9FF] group-hover:text-black group-hover:border-[#00D9FF] transition-colors" data-sd-id="124">
+                  <iconify-icon icon="lucide:linkedin" class="text-xl"></iconify-icon>
+                </span>
+                <span class="text-xl font-medium" data-sd-id="125">LinkedIn</span>
+              </a>
+              <a href="#" id="social-github" class="flex items-center space-x-4 group" data-sd-id="126">
+                <span class="w-12 h-12 bg-white/5 border border-white/10 rounded-full flex items-center justify-center group-hover:bg-[#00D9FF] group-hover:text-black group-hover:border-[#00D9FF] transition-colors" data-sd-id="127">
+                  <iconify-icon icon="lucide:github" class="text-xl"></iconify-icon>
+                </span>
+                <span class="text-xl font-medium" data-sd-id="128">GitHub</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="p-12 md:p-16 rounded-[3rem] bg-zinc-950/50 border border-white/5 relative overflow-hidden group" data-sd-id="129">
+            <form class="space-y-8 relative z-10" data-sd-id="130">
+              <div class="space-y-4" data-sd-id="131">
+                <label class="text-sm font-black uppercase tracking-[0.3em] text-[#00D9FF]" data-sd-id="132">Full Name</label>
+                <input type="text" placeholder="John Doe" class="w-full bg-black border border-white/10 p-6 rounded-2xl text-lg text-white placeholder:text-white/20 transition-all" data-sd-id="133">
+              </div>
+              <div class="space-y-4" data-sd-id="134">
+                <label class="text-sm font-black uppercase tracking-[0.3em] text-[#00D9FF]" data-sd-id="135">Email Address</label>
+                <input type="email" placeholder="john@example.com" class="w-full bg-black border border-white/10 p-6 rounded-2xl text-lg text-white placeholder:text-white/20 transition-all" data-sd-id="136">
+              </div>
+              <div class="space-y-4" data-sd-id="137">
+                <label class="text-sm font-black uppercase tracking-[0.3em] text-[#00D9FF]" data-sd-id="138">Your Message</label>
+                <textarea rows="6" placeholder="Tell me about your project..." class="w-full bg-black border border-white/10 p-6 rounded-2xl text-lg text-white placeholder:text-white/20 transition-all resize-none" data-sd-id="139"></textarea>
+              </div>
+              <button type="submit" class="w-full py-6 bg-[#00D9FF] hover:bg-[#00b8d9] text-black text-xl font-black uppercase tracking-[0.2em] rounded-2xl transition-all shadow-[0_0_20px_rgba(0,217,255,0.15)] hover:shadow-[0_0_40px_rgba(0,217,255,0.3)] flex items-center justify-center space-x-4" data-sd-id="140">
+                <span data-sd-id="141">Initialize Contact</span>
+                <iconify-icon icon="lucide:arrow-right" class="text-2xl"></iconify-icon>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-white/5 px-6">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center text-white/30 text-xs font-mono">
+        <p>© 2024 RISHIT SINGH. ENGINEERING EXCELLENCE</p>
+        <p class="mt-4 md:mt-0 uppercase tracking-widest">Stay Inspired • Keep Designing</p>
+      </div>
+    </footer>
+    </main>
+  </div>
+
+  <!-- p5.js Force Field Script Integration -->
+  <script>
+    new p5((p) => {
+      let img;
+      let points = [];
+      let palette = [];
+      const spacing = 8;
+      const radius = 220;
+      const strength = 18;
+      const friction = 0.92;
+      const restore = 0.05;
+      const hue = 189; // Cyan hue
+      const saturation = 100;
+
+      p.setup = () => {
+        const container = document.getElementById('p5-hero-container');
+        const canvas = p.createCanvas(container.clientWidth, container.clientHeight);
+        canvas.parent('p5-hero-container');
+        
+        p.colorMode(p.HSL);
+        for (let i = 0; i < 10; i++) {
+          palette.push(p.color(hue, saturation, p.map(i, 0, 9, 80, 20)));
+        }
+
+        initPoints();
+      };
+
+      function initPoints() {
+        points = [];
+        for (let y = 0; y < p.height; y += spacing) {
+          for (let x = 0; x < p.width; x += spacing) {
+            points.push({
+              pos: p.createVector(x, y),
+              origin: p.createVector(x, y),
+              vel: p.createVector(0, 0),
+              size: p.random(2, 5)
+            });
+          }
+        }
+      }
+
+      p.windowResized = () => {
+        const container = document.getElementById('p5-hero-container');
+        p.resizeCanvas(container.clientWidth, container.clientHeight);
+        initPoints();
+      };
+
+      p.draw = () => {
+        p.background(0, 0.08);
+        
+        const mx = p.mouseX;
+        const my = p.mouseY;
+
+        p.noFill();
+        
+        for (let pt of points) {
+          let dist = p.dist(pt.pos.x, pt.pos.y, mx, my);
+          
+          if (dist < radius) {
+            let dir = p5.Vector.sub(pt.pos, p.createVector(mx, my));
+            dir.normalize();
+            let f = dir.mult(strength * (1 - dist / radius));
+            pt.vel.add(f);
+          }
+
+          pt.vel.mult(friction);
+          let res = p5.Vector.sub(pt.origin, pt.pos).mult(restore);
+          pt.vel.add(res);
+          pt.pos.add(pt.vel);
+
+          let shade = Math.floor(p.map(p.dist(pt.pos.x, pt.pos.y, pt.origin.x, pt.origin.y), 0, 30, 0, palette.length - 1));
+          shade = p.constrain(shade, 0, palette.length - 1);
+          
+          p.stroke(palette[shade]);
+          p.strokeWeight(pt.size * (1 + (radius - Math.min(dist, radius)) / radius));
+          p.point(pt.pos.x, pt.pos.y);
+        }
+      };
+    });
+
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+      threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('opacity-100', 'translate-y-0');
+          entry.target.classList.remove('opacity-0', 'translate-y-10');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('#services .glass-card, #work .project-card').forEach(el => {
+      el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+      observer.observe(el);
+    });
+  </script>
+
+</body></html>
