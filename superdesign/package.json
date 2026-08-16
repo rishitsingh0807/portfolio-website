@@ -1,0 +1,11 @@
+{
+  "name": "cyberpunk-circuit-background",
+  "description": "Interactive cyberpunk circuit 3D cursor effect background",
+  "dependencies": {
+    "three": "^0.160.0",
+    "framer-motion": "^11.0.0",
+    "lucide-react": "^0.300.0",
+    "clsx": "^2.1.0",
+    "tailwind-merge": "^2.2.0"
+  }
+}
